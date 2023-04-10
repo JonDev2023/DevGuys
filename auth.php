@@ -21,12 +21,13 @@
 
         } else {
             header('Location: /');
+            exit();
         }
         $user['key'] = $key;
         $json_data[$email] = $user;
         $json_new_str = json_encode($json_data);
         file_put_contents('users.json', $json_new_str);
         header("Location: /home?key=$key");
-        echo "Se você ainda não estiver redirecionado para a pagina inicial use essa chave: $key";
+        exit();
     }
 ?>
