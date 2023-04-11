@@ -29,7 +29,9 @@
             header("Location: /home?key=$key");
             exit();
         } else {
-            echo 'Tente de novo';
+            echo 'Tente de novo senha errada';
         }
+    } else {
+        echo 'Tente de novo email errado';
     }
 ?>
